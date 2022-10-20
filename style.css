@@ -42,7 +42,8 @@ li {
 .brown_logo {
   display: flex;
   align-items: center;
-  width: 50px;
+  width: auto;
+  height: 70px;
 }
 .container {
   display: flex;
@@ -226,7 +227,7 @@ button:hover {
 }
 
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 1020px) {
+@media (max-width: 1090px) {
   .menu {
     display: none;
     position: absolute;
