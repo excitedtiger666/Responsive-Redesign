@@ -1,0 +1,295 @@
+/* NAVBAR STYLING STARTS */
+/* UTILITIES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fffaef;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: white;
+  /* bottom border properties */
+  border: 2px solid #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: black;
+  position: sticky;
+  /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+.nav-links a {
+  color: black;
+}
+.brown_logo {
+  display: flex;
+  align-items: center;
+  width: 50px;
+}
+.container {
+  display: flex;
+  align-items: center;
+}
+/* LOGO */
+.logo {
+  font-size: 2.75rem;
+  font-weight: 600;
+  float: right;
+}
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 0.8rem;
+}
+.menu li:hover {
+  border: 2px solid #c00404;
+  transition: 0.3s ease;
+}
+.menu li {
+  padding: 5px 14px;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.first-set {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 5% 10%;
+}
+.what-header,
+.fellow-detail,
+.explore-button,
+.want-header,
+.want-detail,
+.office-button,
+.important-header,
+.important-button,
+.calendar-button {
+  display: flex;
+  width: 80%;
+}
+
+.what-header,
+.want-header,
+.important-header {
+  margin-bottom: 1%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.fellow-detail,
+.want-detail {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.explore-button,
+.office-button,
+.calendar-button {
+  justify-content: flex-end;
+}
+
+.calendar-button {
+  margin-top: 0.5rem;
+}
+.date-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-1,
+.date-2,
+.date-3 {
+  border-right: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin-left: 1.5rem;
+}
+
+.date-3 {
+  border: none;
+}
+
+.date-p {
+  font-weight: bolder;
+}
+
+.fellowship-p {
+  color: #c00404;
+}
+button {
+  background-color: #c00404;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 4px 2px;
+  transition: 0.3s;
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.large-footer {
+  display: flex;
+  height: 25vh;
+  background-color: #4d3629;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.brown-footer {
+  display: flex;
+  align-items: center;
+  height: 30%;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
+  color: #b7b09c;
+  font-size: 1rem;
+}
+.together-footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.visit {
+  display: flex;
+  height: 10%;
+  color: white;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 4em;
+  margin-left: 2.4rem;
+  font-size: 0.7rem;
+}
+.contact {
+  display: flex;
+  height: 10%;
+  color: white;
+  /* flex-direction: row;
+    justify-content: space-evenly; */
+}
+.icon-set {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.end-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socials {
+  display: flex;
+  margin-right: 2rem;
+}
+
+.socials img {
+  height: 30px;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 1020px) {
+  body {
+    overflow-x: hidden;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    left: 0;
+    text-align: right;
+    padding: 16px 0;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .date-3 {
+    display: none;
+  }
+  .date-2 {
+    border: none;
+  }
+  .date-1 {
+    margin-left: 7.5rem;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: white;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    margin-top: 1.5rem;
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  button {
+    margin: 0.5rem 0rem 4rem 0rem;
+  }
+  .end-footer {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .date-2 {
+    display: none;
+  }
+  .together-footer {
+    display: none;
+  }
+  .brown-footer {
+    height: 5vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .large-footer{
+      align-items: center;
+  }
+  .date-1 {
+    width: 40%;
+    border: none;
+    margin-left: 4.5rem;
+  }
+}
