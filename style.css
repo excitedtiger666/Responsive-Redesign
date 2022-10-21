@@ -59,7 +59,7 @@ li {
 .menu {
   display: flex;
   gap: 1em;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .menu li:hover {
   border: 2px solid #c00404;
@@ -227,7 +227,7 @@ button:hover {
 }
 
 /* APPLYING MEDIA QUERIES */
-@media (max-width: 1090px) {
+@media (max-width: 1160px) {
   .menu {
     display: none;
     position: absolute;
